@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    background-image: url('Study.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.div1{
+position: relative;
+left: 40%;
+}
+.div1 h2{
+    font-size: 50px;
+}
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+button.present, button.absent {
+    margin-right: 40px;
+    background-color: #4CAF50;
+}
+button.absent:hover{
+background-color: red;
+}
+#attendanceList {
+    margin-top: 20px;
+    
+}
+#attendanceList h1{
+position: relative;
+left: 110px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 5px;
+}
+#downloadBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.home h1 a{
+color: white;
+position: relative;
+left: 93%;
+text-decoration: none;
+}
+.home:hover{
+    text-decoration: underline;
+}
