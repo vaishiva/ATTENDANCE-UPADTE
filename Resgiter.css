@@ -3,7 +3,9 @@ body {
     color: #fff;
     position: relative;
     min-height: 100vh;
-    background-image: url('Study.jpg');
+     height: 100%;
+    width: 60%;
+    background-image: url('register.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -58,8 +60,7 @@ li {
 }
 .home h1 a{
 color: white;
-position: relative;
-left: 93%;
+text-align: left;
 text-decoration: none;
 }
 .home:hover{
