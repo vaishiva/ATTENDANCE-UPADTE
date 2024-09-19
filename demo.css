@@ -3,8 +3,22 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;     
+    position: relative;
+    min-height: 100vh;
+    background-image: url('register.jpg');
 
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
 .container {
     max-width: 600px;
     margin: auto;
@@ -12,6 +26,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     position: relative;
+    top: 180px;
 }
 
 h1 {
