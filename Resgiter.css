@@ -5,10 +5,7 @@ body {
     padding: 20px;
         position: relative;
     min-height: 100vh;
-    background-image :url(Study.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+background-color: black;
 }
 
 .container {
