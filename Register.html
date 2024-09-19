@@ -1,80 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Attendance Tracker</title>
-<link rel="stylesheet" href="Resgiter.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance List</title>
+    <link rel="stylesheet" href="Register.css">
+    <script src="Resiter.js"></script>
 </head>
 <body>
-    <div class="home">
-        <h1><a href="home.html">Home</a></h1>
+    <div class="container">
+        <h1>Attendance List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceList">
+                <tr>
+                    <td>John Doe</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emily Johnson</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="downloadAttendance()">Download Attendance List</button>
+        <button onclick="sendSms()">Send SMS</button>
     </div>
-<div class="div1">
-<h2>Attendance Tracker</h2>
-
-<input type="text" id="nameInput" placeholder="Enter student name">
-<button class="present" onclick="markAttendance('Present')">Present</button>
-<button class="absent" onclick="markAttendance('Absent')">Absent</button>
-
-<div id="attendanceList">
-    <h1>Attendance List</h1>
-    <ul id="attendees">
-    </ul>
-</div>
-
-<button id="downloadBtn" onclick="downloadAttendance()">Download Attendance</button>
-<button id="clear" onclick="">Clear</button>
-</div>
-
-<script>
-        function markAttendance(status) {
-        const nameInput = document.getElementById('nameInput');
-        const name = nameInput.value.trim();
-
-        if (name === '') {
-            alert('Please enter a valid name');
-            return;
-        }
-
-        const attendeesList = document.getElementById('attendees');
-        const listItem = document.createElement('li');
-        listItem.textContent = `${name} - ${status}`;
-        attendeesList.appendChild(listItem);
-
-        nameInput.value = '';
-    }
-
-    function downloadAttendance() {
-        const attendeesList = document.getElementById('attendees');
-        const listItems = attendeesList.getElementsByTagName('li');
-        let data = 'Name         Status\n';
-        for (let i = 0; i < listItems.length; i++) {
-            const text = listItems[i].textContent;
-            const [name, status] = text.split(' - ');
-            data += `${name}   -   ${status}\n`;
-        }
-        
-        const blob = new Blob([data], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'attendance.txt';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        document.body.removeChild(a);
-    }
-    document.addEventListener('DOMContentLoaded', () => {
-    const clearButton = document.getElementById('clear');
-    const inputField = document.getElementById('nameInput');
-
-    clearButton.addEventListener('click', () => {
-        inputField.value = '';
-    });
-});
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
