@@ -4,7 +4,15 @@ body {
     margin: 0;
     padding: 20px;
 }
-
+.body1{
+    position: relative;
+    min-height: 100vh;
+    background-image :url(Study.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
 .container {
     max-width: 600px;
     margin: auto;
