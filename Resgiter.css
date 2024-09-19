@@ -5,9 +5,17 @@ body {
     padding: 20px;
         position: relative;
     min-height: 100vh;
-background-color: black;
-}
 
+}
+.body1{
+    position: relative;
+    min-height: 100vh;
+    background-image :url(study.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+}
 .container {
     max-width: 600px;
     margin: auto;
