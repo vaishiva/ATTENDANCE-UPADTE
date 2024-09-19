@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance List</title>
+    <link rel="stylesheet" href="demo.css">
+    <script src="demo.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceList">
+                <tr>
+                    <td>John Doe</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Emily Johnson</td>
+                    <td>9876543210</td>
+                    <td>
+                        <select onchange="updateStatus(this)">
+                            <option value="">Select</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="downloadAttendance()">Download Attendance List</button>
+        <button onclick="sendSms()">Send SMS</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
